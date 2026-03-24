@@ -1,0 +1,45 @@
+[build]
+  command = "pip install -r requirements.txt"
+  publish = "public"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+# Each file in netlify/functions/ becomes its own endpoint
+# e.g. netlify/functions/eks.py → /.netlify/functions/eks
+[functions]
+  directory = "netlify/functions"
+
+# Rewrite /.netlify/functions/* to /api/* for cleaner URLs
+[[redirects]]
+  from = "/api/eks"
+  to   = "/.netlify/functions/eks"
+  status = 200
+
+[[redirects]]
+  from = "/api/gke"
+  to   = "/.netlify/functions/gke"
+  status = 200
+
+[[redirects]]
+  from = "/api/aks"
+  to   = "/.netlify/functions/aks"
+  status = 200
+
+[[redirects]]
+  from = "/api/onprem"
+  to   = "/.netlify/functions/onprem"
+  status = 200
+
+[[redirects]]
+  from = "/api/compare"
+  to   = "/.netlify/functions/compare"
+  status = 200
+
+# CORS headers for all API routes
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin  = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "POST, OPTIONS"

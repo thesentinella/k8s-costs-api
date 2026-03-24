@@ -1,0 +1,137 @@
+{
+  "_meta": {
+    "source": "https://aws.amazon.com/eks/pricing/ + https://aws.amazon.com/ec2/pricing/on-demand/",
+    "pricing_date": "2025-08-01",
+    "currency": "USD",
+    "note": "On-demand Linux prices. Spot savings ~60-70% but not used for conservative estimates."
+  },
+  "control_plane": {
+    "hourly_fee": 0.10,
+    "free_tiers": 0
+  },
+  "support": {
+    "basic_floor_usd": 0,
+    "basic_pct": 0.0,
+    "developer_floor_usd": 29,
+    "developer_pct": 0.03,
+    "business_floor_usd": 100,
+    "business_pct": 0.10
+  },
+  "regions": {
+    "us-east-1": {
+      "label": "US East (N. Virginia)",
+      "instances": {
+        "t3.medium":    { "vcpu": 2,  "memory_gb": 4,   "price_usd_per_hour": 0.0416  },
+        "t3.large":     { "vcpu": 2,  "memory_gb": 8,   "price_usd_per_hour": 0.0832  },
+        "t3.xlarge":    { "vcpu": 4,  "memory_gb": 16,  "price_usd_per_hour": 0.1664  },
+        "t3.2xlarge":   { "vcpu": 8,  "memory_gb": 32,  "price_usd_per_hour": 0.3328  },
+        "m5.large":     { "vcpu": 2,  "memory_gb": 8,   "price_usd_per_hour": 0.096   },
+        "m5.xlarge":    { "vcpu": 4,  "memory_gb": 16,  "price_usd_per_hour": 0.192   },
+        "m5.2xlarge":   { "vcpu": 8,  "memory_gb": 32,  "price_usd_per_hour": 0.384   },
+        "m5.4xlarge":   { "vcpu": 16, "memory_gb": 64,  "price_usd_per_hour": 0.768   },
+        "m5.8xlarge":   { "vcpu": 32, "memory_gb": 128, "price_usd_per_hour": 1.536   },
+        "m6i.large":    { "vcpu": 2,  "memory_gb": 8,   "price_usd_per_hour": 0.096   },
+        "m6i.xlarge":   { "vcpu": 4,  "memory_gb": 16,  "price_usd_per_hour": 0.192   },
+        "m6i.2xlarge":  { "vcpu": 8,  "memory_gb": 32,  "price_usd_per_hour": 0.384   },
+        "m6i.4xlarge":  { "vcpu": 16, "memory_gb": 64,  "price_usd_per_hour": 0.768   },
+        "c5.large":     { "vcpu": 2,  "memory_gb": 4,   "price_usd_per_hour": 0.085   },
+        "c5.xlarge":    { "vcpu": 4,  "memory_gb": 8,   "price_usd_per_hour": 0.170   },
+        "c5.2xlarge":   { "vcpu": 8,  "memory_gb": 16,  "price_usd_per_hour": 0.340   },
+        "c5.4xlarge":   { "vcpu": 16, "memory_gb": 32,  "price_usd_per_hour": 0.680   },
+        "r5.large":     { "vcpu": 2,  "memory_gb": 16,  "price_usd_per_hour": 0.126   },
+        "r5.xlarge":    { "vcpu": 4,  "memory_gb": 32,  "price_usd_per_hour": 0.252   },
+        "r5.2xlarge":   { "vcpu": 8,  "memory_gb": 64,  "price_usd_per_hour": 0.504   },
+        "r5.4xlarge":   { "vcpu": 16, "memory_gb": 128, "price_usd_per_hour": 1.008   }
+      },
+      "storage": {
+        "ssd_per_gb_month": 0.10,
+        "hdd_per_gb_month": 0.045,
+        "snapshot_per_gb_month": 0.05
+      },
+      "networking": {
+        "egress_per_gb": 0.09,
+        "inter_az_per_gb": 0.01,
+        "load_balancer_per_hour": 0.0225
+      }
+    },
+    "us-west-2": {
+      "label": "US West (Oregon)",
+      "instances": {
+        "t3.medium":    { "vcpu": 2,  "memory_gb": 4,   "price_usd_per_hour": 0.0416  },
+        "t3.large":     { "vcpu": 2,  "memory_gb": 8,   "price_usd_per_hour": 0.0832  },
+        "t3.xlarge":    { "vcpu": 4,  "memory_gb": 16,  "price_usd_per_hour": 0.1664  },
+        "m5.large":     { "vcpu": 2,  "memory_gb": 8,   "price_usd_per_hour": 0.096   },
+        "m5.xlarge":    { "vcpu": 4,  "memory_gb": 16,  "price_usd_per_hour": 0.192   },
+        "m5.2xlarge":   { "vcpu": 8,  "memory_gb": 32,  "price_usd_per_hour": 0.384   },
+        "m5.4xlarge":   { "vcpu": 16, "memory_gb": 64,  "price_usd_per_hour": 0.768   },
+        "m6i.xlarge":   { "vcpu": 4,  "memory_gb": 16,  "price_usd_per_hour": 0.192   },
+        "m6i.2xlarge":  { "vcpu": 8,  "memory_gb": 32,  "price_usd_per_hour": 0.384   },
+        "c5.xlarge":    { "vcpu": 4,  "memory_gb": 8,   "price_usd_per_hour": 0.170   },
+        "c5.2xlarge":   { "vcpu": 8,  "memory_gb": 16,  "price_usd_per_hour": 0.340   },
+        "r5.xlarge":    { "vcpu": 4,  "memory_gb": 32,  "price_usd_per_hour": 0.252   },
+        "r5.2xlarge":   { "vcpu": 8,  "memory_gb": 64,  "price_usd_per_hour": 0.504   }
+      },
+      "storage": {
+        "ssd_per_gb_month": 0.10,
+        "hdd_per_gb_month": 0.045,
+        "snapshot_per_gb_month": 0.05
+      },
+      "networking": {
+        "egress_per_gb": 0.09,
+        "inter_az_per_gb": 0.01,
+        "load_balancer_per_hour": 0.0225
+      }
+    },
+    "eu-west-1": {
+      "label": "Europe (Ireland)",
+      "instances": {
+        "t3.medium":    { "vcpu": 2,  "memory_gb": 4,   "price_usd_per_hour": 0.0464  },
+        "t3.large":     { "vcpu": 2,  "memory_gb": 8,   "price_usd_per_hour": 0.0928  },
+        "t3.xlarge":    { "vcpu": 4,  "memory_gb": 16,  "price_usd_per_hour": 0.1856  },
+        "m5.large":     { "vcpu": 2,  "memory_gb": 8,   "price_usd_per_hour": 0.107   },
+        "m5.xlarge":    { "vcpu": 4,  "memory_gb": 16,  "price_usd_per_hour": 0.214   },
+        "m5.2xlarge":   { "vcpu": 8,  "memory_gb": 32,  "price_usd_per_hour": 0.428   },
+        "m5.4xlarge":   { "vcpu": 16, "memory_gb": 64,  "price_usd_per_hour": 0.856   },
+        "m6i.xlarge":   { "vcpu": 4,  "memory_gb": 16,  "price_usd_per_hour": 0.214   },
+        "m6i.2xlarge":  { "vcpu": 8,  "memory_gb": 32,  "price_usd_per_hour": 0.428   },
+        "c5.xlarge":    { "vcpu": 4,  "memory_gb": 8,   "price_usd_per_hour": 0.192   },
+        "c5.2xlarge":   { "vcpu": 8,  "memory_gb": 16,  "price_usd_per_hour": 0.384   },
+        "r5.xlarge":    { "vcpu": 4,  "memory_gb": 32,  "price_usd_per_hour": 0.282   },
+        "r5.2xlarge":   { "vcpu": 8,  "memory_gb": 64,  "price_usd_per_hour": 0.564   }
+      },
+      "storage": {
+        "ssd_per_gb_month": 0.11,
+        "hdd_per_gb_month": 0.05,
+        "snapshot_per_gb_month": 0.055
+      },
+      "networking": {
+        "egress_per_gb": 0.09,
+        "inter_az_per_gb": 0.01,
+        "load_balancer_per_hour": 0.0265
+      }
+    },
+    "ap-southeast-1": {
+      "label": "Asia Pacific (Singapore)",
+      "instances": {
+        "t3.medium":    { "vcpu": 2,  "memory_gb": 4,   "price_usd_per_hour": 0.0520  },
+        "t3.large":     { "vcpu": 2,  "memory_gb": 8,   "price_usd_per_hour": 0.1040  },
+        "m5.large":     { "vcpu": 2,  "memory_gb": 8,   "price_usd_per_hour": 0.120   },
+        "m5.xlarge":    { "vcpu": 4,  "memory_gb": 16,  "price_usd_per_hour": 0.240   },
+        "m5.2xlarge":   { "vcpu": 8,  "memory_gb": 32,  "price_usd_per_hour": 0.480   },
+        "m6i.xlarge":   { "vcpu": 4,  "memory_gb": 16,  "price_usd_per_hour": 0.240   },
+        "c5.xlarge":    { "vcpu": 4,  "memory_gb": 8,   "price_usd_per_hour": 0.192   },
+        "r5.xlarge":    { "vcpu": 4,  "memory_gb": 32,  "price_usd_per_hour": 0.296   }
+      },
+      "storage": {
+        "ssd_per_gb_month": 0.114,
+        "hdd_per_gb_month": 0.052,
+        "snapshot_per_gb_month": 0.057
+      },
+      "networking": {
+        "egress_per_gb": 0.12,
+        "inter_az_per_gb": 0.01,
+        "load_balancer_per_hour": 0.0263
+      }
+    }
+  }
+}
