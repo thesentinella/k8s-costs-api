@@ -12,26 +12,6 @@
   to   = "/.netlify/functions/eks"
   status = 200
 
-[[redirects]]
-  from = "/api/gke"
-  to   = "/.netlify/functions/gke"
-  status = 200
-
-[[redirects]]
-  from = "/api/aks"
-  to   = "/.netlify/functions/aks"
-  status = 200
-
-[[redirects]]
-  from = "/api/onprem"
-  to   = "/.netlify/functions/onprem"
-  status = 200
-
-[[redirects]]
-  from = "/api/compare"
-  to   = "/.netlify/functions/compare"
-  status = 200
-
 [[headers]]
   for = "/api/*"
   [headers.values]
